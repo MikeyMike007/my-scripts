@@ -53,7 +53,7 @@ get_duration() {
 }
 
 KEY="3226f5709dfad08f9f0efa23ce9fb7cd"
-CITY="Stockholm"
+CITY=""
 UNITS="metric"
 SYMBOL="°"
 
@@ -109,5 +109,7 @@ if [ -n "$current" ] && [ -n "$forecast" ]; then
         daytime=" $(get_duration "$((sun_rise-now))")"
     fi
 
-    echo "$(get_icon "$current_icon") $current_temp$SYMBOL  $trend  $(get_icon "$forecast_icon") $forecast_temp$SYMBOL   $daytime"
+    echo "$(get_icon "$current_icon") $current_temp$SYMBOL"
+
+	#echo "$(get_icon "$current_icon") $current_temp$SYMBOL  $trend  $(get_icon "$forecast_icon") $forecast_temp$SYMBOL   $daytime"
 fi
